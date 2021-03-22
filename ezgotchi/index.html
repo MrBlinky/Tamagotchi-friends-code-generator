@@ -1,0 +1,179 @@
+<html lang="en"><head><meta charset="UTF-8"><title>Tamagotchi Friends EZgotchi - code generator</title><link rel="manifest" href="manifest.json"><head><style>
+.login {display:block; background-color:rgba(255, 255, 255, 0.5); border: 3px solid black;border-radius: 16px;width:300px;position:relative;margin:8px;padding:4px;font-size:56px;text-align: center}
+.dropbox {display:block; background-color:rgba(255, 255, 255, 0.5); border: 3px solid black;border-radius: 16px;width:450px;position:relative;margin:8px;padding:4px;font-size:48px;font-height:48px;text-align: center}
+.submit {display:block; background-color:rgba(255, 255, 255, 0.5); border: 3px solid black;border-radius: 80px;left:250px;top:520px;width:500px;height:160px;position:absolute;margin:8px;padding:4px;font-size:48px;text-align: center}
+</style></head><body><center>
+<div style="background-repeat: no-repeat;background-image:url(pink-hearts.jpg);background-size:100%; width:1024px;height:1200px; position:relative;">
+<div style="position:relative;left: 4px;top: 330px;font-family:arial;font-weight:bold;font-size:48px;line-height:48px">
+Login password:
+<form action="code.php">
+<input name="code1" maxlength="7" class="login">
+<input name="code2" maxlength="7" class="login">
+your prize:
+<select name="type" id="type" onchange="selectChange(this.value);" class="dropbox">
+<option value= "0">Meal</option>
+<option value= "1">Snack</option>
+<option value= "2">Crown</option>
+<option value= "3">Necklace</option>
+<option value= "4">Bracelet</option>
+<option value= "5">Ring</option>
+</select>
+<select name= "item" id="meals" style="display:block" class="dropbox">
+<option value= "0">Bread</option>
+<option value= "1">Cereal</option>
+<option value= "2">Baguette</option>
+<option value= "3">Fries</option>
+<option value= "4">Salad</option>
+<option value= "5">Sandwich</option>
+<option value= "6">Hotdog</option>
+<option value= "7">Scone</option>
+<option value= "8">Taco</option>
+<option value= "9">Sausage</option>
+<option value="10">Pizza</option>
+<option value="11">Hamburger</option>
+<option value="12">Soup</option>
+<option value="13">Corn</option>
+<option value="14">Steak</option>
+<option value="15">Omelette</option>
+<option value="16">Rice bowl</option>
+<option value="17">Pasta</option>
+<option value="18">Chicken pie</option>
+<option value="19">Fried chicken</option>
+<option value="20">Mega pizza</option>
+<option value="21">Beef bowl</option>
+<option value="22">Tempura</option>
+<option value="23">Noodles</option>
+<option value="24">Baked potato</option>
+<option value="25">Meat ball</option>    
+<option value="26">Clam chowder</option> 
+<option value="27">Meat pie</option>     
+<option value="28">Sushi</option>        
+<option value="29">Turkey</option>
+</select>
+<select id="snacks" style="display:none" class="dropbox">
+<option value= "0">Milk</option>
+<option value= "1">Bananas</option>
+<option value= "2">orange</option>
+<option value= "3">Pear</option>
+<option value= "4">Pinapple</option>
+<option value= "5">Popcorn</option>
+<option value= "6">Cookie</option>
+<option value= "7">Chocolate</option>
+<option value= "8">Icecream</option>
+<option value= "9">Candy</option>
+<option value="10">Juice</option>
+<option value="11">Donut</option>
+<option value="12">Macaroon</option>
+<option value="13">Cupcake</option>
+<option value="14">Choco bar</option>
+<option value="15">Lolipop</option>
+<option value="16">Crepe</option>
+<option value="17">Grapes</option>
+<option value="18">Cherries</option>
+<option value="19">Muffin</option>
+<option value="20">Waffle</option>
+<option value="21">Pudding</option>
+<option value="22">Sundae</option>
+<option value="23">Pancake</option>
+<option value="24">Melon</option>
+<option value="25">Cheese cake</option>  
+<option value="26">Cotton candy</option> 
+<option value="27">Apple pie</option>    
+<option value="28">Yoghurt</option>      
+<option value="29">Cake</option>
+</select>
+<select id="crowns" style="display:none" class="dropbox">
+<option value= "0">Queens crown</option>
+<option value= "1">Crown of stars</option>
+<option value= "2">Crown of roses</option>
+<option value= "3">Crown of diamonds</option>
+<option value= "4">Crown of bows</option>
+<option value= "5">Crown of cherries</option>
+<option value= "6">Crown of music</option>
+<option value= "7">Crown of nature</option>
+<option value= "8">Crown of blossoms</option>
+<option value= "9">Crown of twilight</option>
+<option value="10">Crown of power</option>
+<option value="11">Tiara</option>
+<option value="12">Crown of hearts</option>
+<option value="13">Crown of skies</option>
+<option value="14">Majestic crown</option>
+</select>
+<select id="necklaces" style="display:none" class="dropbox">
+<option value= "0">Heart charm</option>
+<option value= "1">Starry charm</option>
+<option value= "2">Flower charm</option>
+<option value= "3">Beauty charm</option>
+<option value= "4">Bow charm</option>
+<option value= "5">Cherry blossom</option>
+<option value= "6">Charm of music</option>
+<option value= "7">Charm of flutters</option>
+<option value= "8">Flowery  necklace</option>
+<option value= "9">charm of stars</option>
+<option value="10">Three diamonds</option>
+<option value="11">pearl necklace</option>
+<option value="12">Angel wings</option>
+<option value="13">Starry night</option>
+<option value="14">Love charm</option>
+</select>
+<select id="bracelets" style="display:none" class="dropbox">
+<option value= "0">Bracelet of love</option>
+<option value= "1">Bracelet of the sky</option>
+<option value= "2">Bracelet of roses</option>
+<option value= "3">Besty bracelet</option>
+<option value= "4">Bow bracelet</option>
+<option value= "5">Gold bracelet</option>
+<option value= "6">Bracelet of melodies</option>
+<option value= "7">Angelic bracelet</option>
+<option value= "8">Bracelet of happyness</option>
+<option value= "9">Bracelet of twinkles</option>
+<option value="10">Bracelet of  jewels</option>
+<option value="11">Bracelet of pearls</option>
+<option value="12">Wings of love bracelet</option>
+<option value="13">Starry bracelet</option>
+<option value="14">Cutey bracelet</option>
+</select>
+<select id="rings" style="display:none" class="dropbox">
+<option value= "0">Heart of love</option>
+<option value= "1">Star bright</option>
+<option value= "2">Floral ring</option>
+<option value= "3">Rosey ring</option>
+<option value= "4">Bow ring</option>
+<option value= "5">Blossom ring</option>
+<option value= "6">Ring of music</option>
+<option value= "7">Lucky ring</option>
+<option value= "8">Ring of luck</option>
+<option value= "9">Starry ring</option>
+<option value="10">Diamond ring</option>
+<option value="11">Ring of nature</option>
+<option value="12">Ring of love</option>
+<option value="13">Ring of the sun</option>
+<option value="14">Ring of power</option>
+</select>
+<input type="submit" value="Generate" class="submit">
+<form></div></div>
+<div style="position:relative;top:50px;width:800px;font-family:arial;font-weight:bold;font-size:48px;text-align:left">
+To find your login code on your Tamagotchi Friends:<ul>
+<li>Select the door icon menu.
+<li>press the A-button 3 times.
+<li>press the B-button to select the <B>PC</B> option.
+</ul>
+</div></center>
+<script>
+function selectChange(i) {
+    if (i == 0) {document.getElementById("meals").style.display ='block';    document.getElementById("meals").setAttribute('name','item')}
+	else        {document.getElementById("meals").style.display ='none';     document.getElementById("meals").setAttribute('name','')}
+    if (i == 1) {document.getElementById("snacks").style.display ='block';   document.getElementById("snacks").setAttribute('name','item')}
+	else        {document.getElementById("snacks").style.display ='none';    document.getElementById("snacks").setAttribute('name','')}
+    if (i == 2) {document.getElementById("crowns").style.display ='block';   document.getElementById("crowns").setAttribute('name','item')}
+	else        {document.getElementById("crowns").style.display ='none';    document.getElementById("crowns").setAttribute('name','')}
+    if (i == 3) {document.getElementById("necklaces").style.display ='block';document.getElementById("necklaces").setAttribute('name','item')}
+	else        {document.getElementById("necklaces").style.display ='none'; document.getElementById("necklaces").setAttribute('name','')}
+    if (i == 4) {document.getElementById("bracelets").style.display ='block';document.getElementById("bracelets").setAttribute('name','item')}
+	else        {document.getElementById("bracelets").style.display ='none'; document.getElementById("bracelets").setAttribute('name','')}
+    if (i == 5) {document.getElementById("rings").style.display ='block';    document.getElementById("rings").setAttribute('name','item')}
+	else        {document.getElementById("rings").style.display ='none';     document.getElementById("rings").setAttribute('name','')}
+}
+selectChange(document.getElementById("type").selectedIndex);
+</script>
+</body></html>
